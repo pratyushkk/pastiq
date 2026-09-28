@@ -142,9 +142,7 @@ It combines three closely related workflows into one unified, blazing-fast searc
 2. Enable **Developer mode** toggle in the top-right corner.
 3. Click the **Load unpacked** button.
 4. Select the **`dist`** directory inside this folder:
-   ```
-   C:\Users\PRATYUSH\OneDrive\Desktop\Pastiq\dist
-   ```
+  
 5. Pin **Pastiq** from your Chrome extensions menu for instant access!
 
 ---

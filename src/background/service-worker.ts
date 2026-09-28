@@ -179,23 +179,26 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
             return;
           }
 
-          const reader = new FileReader();
-          reader.onloadend = async () => {
-            const base64data = reader.result as string;
-            await repository.saveItem({
-              content: base64data,
-              type: 'image',
-              sourceUrl: tab.url,
-              sourceDomain: getDomain(tab.url),
-              pageTitle: tab.title,
-              metadata: {
-                mimeType: blob.type,
-                sizeBytes: blob.size
-              }
-            });
-            showNotification('Image saved to Pastiq');
-          };
-          reader.readAsDataURL(blob);
+          const buffer = await blob.arrayBuffer();
+          const bytes = new Uint8Array(buffer);
+          let binary = '';
+          for (let i = 0; i < bytes.byteLength; i++) {
+            binary += String.fromCharCode(bytes[i]);
+          }
+          const base64data = `data:${blob.type || 'image/png'};base64,${btoa(binary)}`;
+
+          await repository.saveItem({
+            content: base64data,
+            type: 'image',
+            sourceUrl: tab.url,
+            sourceDomain: getDomain(tab.url),
+            pageTitle: tab.title,
+            metadata: {
+              mimeType: blob.type,
+              sizeBytes: blob.size
+            }
+          });
+          showNotification('Image saved to Pastiq');
         } catch (err) {
           console.error('Failed to capture image:', err);
         }

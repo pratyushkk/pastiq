@@ -12,47 +12,50 @@ async function build() {
     fs.mkdirSync(distDir, { recursive: true });
   }
 
-  // 1. Compile TypeScript entry points with esbuild
+  // 1. Compile TypeScript entry points with esbuild as self-contained IIFE
   const entryPoints = [
     {
       in: 'src/background/service-worker.ts',
-      out: 'background/service-worker',
-      format: 'esm'
+      out: 'background/service-worker'
     },
     {
       in: 'src/content/content-script.ts',
-      out: 'content/content-script',
-      format: 'iife'
+      out: 'content/content-script'
     },
     {
       in: 'src/popup/popup.ts',
-      out: 'popup/popup',
-      format: 'esm'
+      out: 'popup/popup'
     },
     {
       in: 'src/options/options.ts',
-      out: 'options/options',
-      format: 'esm'
+      out: 'options/options'
     },
     {
       in: 'src/onboarding/onboarding.ts',
-      out: 'onboarding/onboarding',
-      format: 'esm'
+      out: 'onboarding/onboarding'
     }
   ];
 
   for (const entry of entryPoints) {
+    // Build to dist/
     await esbuild.build({
       entryPoints: [entry.in],
       outfile: path.join(distDir, `${entry.out}.js`),
       bundle: true,
-      format: entry.format,
+      format: 'iife',
       target: 'es2022',
       minify: !isWatch,
       sourcemap: isWatch ? 'inline' : false,
       treeShaking: true,
       legalComments: 'none'
     });
+
+    // Also mirror to root folder so loading root directly works too!
+    const rootOutFile = path.resolve(`${entry.out}.js`);
+    const rootOutDir = path.dirname(rootOutFile);
+    if (!fs.existsSync(rootOutDir)) fs.mkdirSync(rootOutDir, { recursive: true });
+    fs.copyFileSync(path.join(distDir, `${entry.out}.js`), rootOutFile);
+
     console.log(`  ✓ Compiled ${entry.out}.js`);
   }
 
@@ -74,7 +77,7 @@ async function build() {
   // Copy manifest
   fs.copyFileSync('manifest.json', path.join(distDir, 'manifest.json'));
 
-  // Copy CSS and HTML
+  // Copy CSS and HTML to dist/
   copyRecursive('src/content/content-style.css', path.join(distDir, 'content/content-style.css'));
   copyRecursive('src/popup/popup.html', path.join(distDir, 'popup/popup.html'));
   copyRecursive('src/popup/popup.css', path.join(distDir, 'popup/popup.css'));
@@ -84,12 +87,22 @@ async function build() {
   copyRecursive('src/onboarding/onboarding.html', path.join(distDir, 'onboarding/onboarding.html'));
   copyRecursive('src/onboarding/onboarding.css', path.join(distDir, 'onboarding/onboarding.css'));
 
+  // Also mirror HTML and CSS to root folder so loading root directly works too!
+  copyRecursive('src/content/content-style.css', path.resolve('content/content-style.css'));
+  copyRecursive('src/popup/popup.html', path.resolve('popup/popup.html'));
+  copyRecursive('src/popup/popup.css', path.resolve('popup/popup.css'));
+  copyRecursive('src/styles', path.resolve('styles'));
+  copyRecursive('src/options/options.html', path.resolve('options/options.html'));
+  copyRecursive('src/options/options.css', path.resolve('options/options.css'));
+  copyRecursive('src/onboarding/onboarding.html', path.resolve('onboarding/onboarding.html'));
+  copyRecursive('src/onboarding/onboarding.css', path.resolve('onboarding/onboarding.css'));
+
   // Copy icons
   if (fs.existsSync('icons')) {
     copyRecursive('icons', path.join(distDir, 'icons'));
   }
 
-  console.log('✅ Pastiq build complete! Output located in dist/');
+  console.log('✅ Pastiq build complete! Output ready in both dist/ and root folder.');
 }
 
 build().catch(err => {

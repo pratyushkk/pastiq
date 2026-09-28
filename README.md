@@ -11,6 +11,14 @@ It combines three closely related workflows into one unified, blazing-fast searc
 
 ---
 
+## 🌐 Official Website & Links
+
+- **Live Website**: [https://pratyushkk.github.io/pastiq-website/](https://pratyushkk.github.io/pastiq-website/)
+- **Website Repository**: [pratyushkk/pastiq-website](https://github.com/pratyushkk/pastiq-website)
+- **Privacy Policy**: [https://pratyushkk.github.io/pastiq-website/privacy.html](https://pratyushkk.github.io/pastiq-website/privacy.html)
+
+---
+
 ## 🌟 Core Philosophy & Design
 
 - **Unified Command Center**: The search bar intelligently displays matching **Clips**, **Snippets**, and **Commands** simultaneously.

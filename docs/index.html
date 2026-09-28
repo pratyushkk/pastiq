@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11161C">
+  <meta name="description" content="Pastiq — the fast, private clipboard and lightweight command center for Chrome.">
+  <title>Pastiq — Clipboard, Snippets & Command Center</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="nav">
+    <a class="brand" href="./" aria-label="Pastiq home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" role="img">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#17202A"/>
+          <path d="M12 31V9.5h10.2c5.1 0 8.2 2.8 8.2 7.1s-3.1 7.1-8.2 7.1h-5.2V31H12Zm5-11.4h4.8c2.3 0 3.6-1.1 3.6-3s-1.3-3-3.6-3H17v6Z" fill="#F1F5F9"/>
+          <path d="M27.4 13.2c1.7.8 3 1.9 3 3.4 0 2.5-2.3 4.1-5.2 4.1h-3.1l-4.1 3.6V31h4.7v-5.5h3c5.2 0 8.4-3.2 8.4-7.8 0-2.1-.7-3.6-2-4.9l-4.7.4Z" fill="#60A5FA" opacity=".95"/>
+        </svg>
+      </span>
+      <span>Pastiq</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#download">Get Pastiq</a>
+      <a class="github-link" href="https://github.com/pratyushkk/pastiq" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="status-dot"></span> Local-first Chrome utility</div>
+      <h1>Everything you copy.<br><span>One place to find it.</span></h1>
+      <p class="hero-copy">Pastiq combines clipboard history, reusable snippets, and a lightweight browser Command Center into one fast, private workflow.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#download">Get Pastiq</a>
+        <a class="button secondary" href="#features">Explore features</a>
+      </div>
+      <div class="hero-note">COPY → SAVE → SEARCH → PASTE → ACT</div>
+
+      <div class="product-frame" aria-label="Pastiq interface preview">
+        <div class="window-bar">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <div class="window-title">Pastiq</div>
+          <div class="window-shortcut">Ctrl K</div>
+        </div>
+        <div class="product-body">
+          <aside class="product-side">
+            <div class="mini-brand"><span class="mini-icon">P</span><strong>Pastiq</strong></div>
+            <div class="side-item active">⌕ <span>Command Center</span></div>
+            <div class="side-item">▣ <span>Clips</span></div>
+            <div class="side-item">✦ <span>Snippets</span></div>
+            <div class="side-item">⚙ <span>Settings</span></div>
+          </aside>
+          <div class="product-main">
+            <div class="search-demo"><span>⌕</span><span class="search-text">Search clips, snippets or commands...</span><kbd>Ctrl K</kbd></div>
+            <div class="demo-tabs"><span class="selected">Clips</span><span>Snippets</span><span>Commands</span></div>
+            <div class="section-label">Pinned <a href="#">See all</a></div>
+            <div class="clip-grid">
+              <div class="clip"><span class="clip-icon mail">✉</span><div><b>My email</b><small>hello@example.com</small></div><span class="pin">⌖</span></div>
+              <div class="clip"><span class="clip-icon home">⌂</span><div><b>Address</b><small>123 Main Street...</small></div><span class="pin">⌖</span></div>
+            </div>
+            <div class="section-label">Recent <a href="#">See all</a></div>
+            <div class="clip-list">
+              <div class="clip"><span class="clip-icon link">↗</span><div><b>GitHub</b><small>https://github.com/pratyushkk</small></div><time>2m</time></div>
+              <div class="clip"><span class="clip-icon code">&lt;/&gt;</span><div><b>npm install</b><small>npm install chrome-storage</small></div><time>12m</time></div>
+              <div class="clip"><span class="clip-icon text">▤</span><div><b>Meeting notes</b><small>Project updates and next steps...</small></div><time>28m</time></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-heading">
+        <div class="eyebrow">Built for everyday use</div>
+        <h2>Small footprint. <span>Useful everywhere.</span></h2>
+        <p>Pastiq keeps the interface focused while putting the actions you use most within a few keystrokes.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card large">
+          <div class="feature-icon">⌕</div>
+          <h3>Universal search</h3>
+          <p>Search clipboard history, snippets and browser commands from the same fast search field. Exact matches and recent items rise to the top.</p>
+          <div class="mock-command">
+            <div class="mock-search">⌕ github <kbd>Esc</kbd></div>
+            <div class="mock-row"><span class="blue">↗</span><div><b>GitHub</b><small>https://github.com/pratyushkk</small></div><em>Clip</em></div>
+            <div class="mock-row"><span class="purple">✦</span><div><b>;github</b><small>https://github.com/pratyushkk</small></div><em>Snippet</em></div>
+            <div class="mock-row"><span class="green">⌘</span><div><b>Open GitHub</b><small>Open site</small></div><em>Command</em></div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">▣</div>
+          <h3>Clipboard history</h3>
+          <p>Keep useful text close at hand. Pin important clips, search by content or source, and let old items clean up automatically.</p>
+          <div class="stat-row"><strong>500</strong><span>default history</span></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">✦</div>
+          <h3>Snippets</h3>
+          <p>Save replies, addresses, links and templates such as <code>;email</code> or <code>;github</code> and reuse them instantly.</p>
+          <div class="snippet-chip"><span>;email</span><span>Thanks for reaching out...</span></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⌁</div>
+          <h3>Page actions</h3>
+          <p>Copy selected text, visible page text, the current element, page URL or title. Save useful page information with minimal friction.</p>
+          <div class="action-stack"><span>Copy selected text <b>Copy</b></span><span>Copy page URL <b>Copy</b></span><span>Bookmark this page <b>Save</b></span></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⌘</div>
+          <h3>Keyboard-first</h3>
+          <p>Open Pastiq, type what you need, press Enter. Arrow-key navigation keeps common actions fast without reaching for the mouse.</p>
+          <div class="keys"><kbd>Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span><kbd>P</kbd></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">◈</div>
+          <h3>Slate by design</h3>
+          <p>A restrained dark interface with soft blue accents, clear hierarchy and subtle motion. Premium without visual noise.</p>
+          <div class="swatches"><i></i><i></i><i></i><i></i><i></i></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="command-section">
+      <div class="command-copy">
+        <div class="eyebrow">Command Center</div>
+        <h2>One search box.<br><span>More than clipboard.</span></h2>
+        <p>The Command Center stays lightweight by reusing Pastiq's existing search experience. No giant dashboard, no complicated command language required.</p>
+        <ul>
+          <li><span>✓</span> Search normally or use optional commands like <code>/page</code>.</li>
+          <li><span>✓</span> Get page and browser actions only when they're relevant.</li>
+          <li><span>✓</span> Keep your everyday clipboard workflow unchanged.</li>
+        </ul>
+      </div>
+      <div class="command-panel">
+        <div class="panel-search">⌕ /page <span>×</span></div>
+        <div class="panel-title">PAGE ACTIONS</div>
+        <div class="command-row active"><span>▣</span><b>Copy selected text</b><button>Copy</button></div>
+        <div class="command-row"><span>▣</span><b>Copy visible page text</b><button>Copy</button></div>
+        <div class="command-row"><span>↗</span><b>Copy page URL</b><button>Copy</button></div>
+        <div class="command-row"><span>▤</span><b>Copy page title</b><button>Copy</button></div>
+        <div class="divider"></div>
+        <div class="panel-title">BROWSER ACTIONS</div>
+        <div class="command-row"><span>↗</span><b>Open in new tab</b><button>Open</button></div>
+        <div class="command-row"><span>★</span><b>Bookmark this page</b><button>Save</button></div>
+        <div class="command-row"><span>↻</span><b>Reload page</b><button>Reload</button></div>
+      </div>
+    </section>
+
+    <section id="privacy" class="privacy-section">
+      <div class="privacy-card">
+        <div class="privacy-icon">◇</div>
+        <div>
+          <div class="eyebrow">Privacy first</div>
+          <h2>Your clipboard stays on your device.</h2>
+          <p>Pastiq V1 is local-first. Clipboard history, snippets and settings are stored locally in your browser. There is no account, cloud clipboard, or clipboard telemetry.</p>
+          <a class="text-link" href="privacy.html">Read the full Privacy Policy →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="download-section">
+      <div class="download-card">
+        <div class="eyebrow">Pastiq for Chrome</div>
+        <h2>Keep the useful stuff<br><span>one shortcut away.</span></h2>
+        <p>Pastiq is currently distributed as an open-source Chrome extension. Install from the repository while the Chrome Web Store release is being prepared.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/pratyushkk/pastiq" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+        <div class="download-meta"><span>Manifest V3</span><span>Local-first</span><span>Slate UI</span><span>Sync coming soon</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="./"><span class="brand-mark small"><svg viewBox="0 0 40 40"><rect x="2" y="2" width="36" height="36" rx="10" fill="#17202A"/><path d="M12 31V9.5h10.2c5.1 0 8.2 2.8 8.2 7.1s-3.1 7.1-8.2 7.1h-5.2V31H12Zm5-11.4h4.8c2.3 0 3.6-1.1 3.6-3s-1.3-3-3.6-3H17v6Z" fill="#F1F5F9"/></svg></span><span>Pastiq</span></a>
+    <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="https://github.com/pratyushkk/pastiq" target="_blank" rel="noopener">GitHub</a></div>
+    <p>© 2026 Pastiq. Built for a faster browser workflow.</p>
+  </footer>
+</body>
+</html>

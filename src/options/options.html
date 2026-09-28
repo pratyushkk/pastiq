@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastiq — Settings & Preferences</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body class="theme-cinematic">
+  <div class="settings-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="settings-sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-box">
+          <img src="../icons/icon32.png" width="28" height="28" alt="Pastiq" style="border-radius: 6px; display: block;" />
+        </div>
+        <div>
+          <h2>Pastiq</h2>
+          <span class="version-tag">v1.0.0 • Local-First</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-tab="general">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          General
+        </button>
+
+        <button class="nav-item" data-tab="privacy">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          Privacy & Security
+        </button>
+
+        <button class="nav-item" data-tab="snippets">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+          Snippets & Expansion
+        </button>
+
+        <button class="nav-item" data-tab="extraction">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          Page Text & Extraction
+        </button>
+
+        <button class="nav-item" data-tab="shortcuts">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+            <path d="M6 8h.001M10 8h.001M14 8h.001M18 8h.001M8 12h.001M12 12h.001M16 12h.001M7 16h10"></path>
+          </svg>
+          Keyboard Shortcuts
+        </button>
+
+        <button class="nav-item" data-tab="sync">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+          </svg>
+          Sync <span class="nav-badge">Soon</span>
+        </button>
+
+        <button class="nav-item" data-tab="about">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          About & Privacy
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="storage-widget">
+          <div class="storage-header">
+            <span>Local Database</span>
+            <span id="storage-size-val">0 KB</span>
+          </div>
+          <div class="storage-bar">
+            <div class="storage-fill" style="width: 14%;"></div>
+          </div>
+          <div class="storage-meta" id="storage-meta-val">0 items stored</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="settings-content">
+      <!-- GENERAL TAB -->
+      <section id="tab-general" class="tab-panel active">
+        <div class="panel-header">
+          <h1>General Settings</h1>
+          <p>Configure clipboard capture rules, capacity, and default behaviors.</p>
+        </div>
+
+        <div class="card">
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Clipboard Capture</label>
+              <span>Automatically record copied text and media into your private local history.</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-capture-enabled" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>History Capacity Limit</label>
+              <span>Maximum items stored before automatically pruning oldest unpinned items.</span>
+            </div>
+            <select id="setting-history-limit" class="select-control">
+              <option value="100">100 items</option>
+              <option value="500" selected>500 items (Recommended)</option>
+              <option value="1000">1,000 items</option>
+              <option value="5000">5,000 items</option>
+              <option value="0">Unlimited (Local storage limit)</option>
+            </select>
+          </div>
+
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Close Popup on Copy</label>
+              <span>Automatically close the Pastiq window immediately after copying an item.</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-close-on-copy" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Auto-cleanup Inactive History</label>
+              <span>Automatically remove items older than a specified duration (pinned items are always preserved).</span>
+            </div>
+            <select id="setting-auto-cleanup" class="select-control">
+              <option value="0" selected>Never auto-delete</option>
+              <option value="7">Older than 7 days</option>
+              <option value="30">Older than 30 days</option>
+              <option value="90">Older than 90 days</option>
+            </select>
+          </div>
+
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Image Clipboard Support</label>
+              <span>Save copied images and screenshots locally in IndexedDB with automatic size constraints.</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-image-capture" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIVACY TAB -->
+      <section id="tab-privacy" class="tab-panel">
+        <div class="panel-header">
+          <h1>Privacy & Security Guard</h1>
+          <p>Pastiq is designed with zero-knowledge, zero-telemetry local security.</p>
+        </div>
+
+        <div class="card">
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Sensitive Field Protection</label>
+              <span>Never capture passwords, credit card numbers, CVVs, or auth tokens from input fields.</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-sensitive-protect" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-block">
+            <label>Never Capture on These Domains</label>
+            <p class="setting-subtext">Add sensitive domains (e.g. banking, password managers). Pastiq completely ignores copy events on these websites.</p>
+            <div class="domain-input-group">
+              <input type="text" id="input-new-domain" placeholder="e.g. mybank.com or vault.company.com" />
+              <button id="btn-add-domain" class="btn-secondary">Add Domain</button>
+            </div>
+            <div class="domain-tags-list" id="domain-tags-list">
+              <!-- Rendered domain chips -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card danger-card">
+          <h3>Erase Local Data</h3>
+          <p class="setting-subtext">Permanently delete stored clipboard items from your local browser IndexedDB.</p>
+          <div class="danger-actions">
+            <button id="btn-clear-unpinned" class="btn-warning">Clear Unpinned History</button>
+            <button id="btn-clear-all" class="btn-danger">Erase ALL Clipboard History</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SNIPPETS TAB -->
+      <section id="tab-snippets" class="tab-panel">
+        <div class="panel-header-actions">
+          <div>
+            <h1>Snippets & Text Expansion</h1>
+            <p>Expand quick shortcuts (e.g. <code>;email</code>) into full text anywhere on the web.</p>
+          </div>
+          <button id="btn-open-create-snippet" class="btn-primary">+ New Snippet</button>
+        </div>
+
+        <div class="card">
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Enable In-Page Text Expansion</label>
+              <span>Seamlessly replace shortcuts in non-sensitive text fields as you type.</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-expansion-enabled" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Expansion Trigger Prefix</label>
+              <span>Symbol typed before snippet shortcuts to initiate detection.</span>
+            </div>
+            <input type="text" id="setting-expansion-trigger" class="input-inline" value=";" maxlength="3" />
+          </div>
+        </div>
+
+        <div class="snippets-table-container">
+          <table class="snippets-table">
+            <thead>
+              <tr>
+                <th>Snippet Name</th>
+                <th>Shortcut</th>
+                <th>Content Preview</th>
+                <th>Usage</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="snippets-table-body">
+              <!-- Rendered snippets -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- PAGE EXTRACTION TAB -->
+      <section id="tab-extraction" class="tab-panel">
+        <div class="panel-header">
+          <h1>Difficult Pages & Clean Extraction</h1>
+          <p>Extract visible text legitimately from pages with disabled selection or cluttered markup.</p>
+        </div>
+
+        <div class="card">
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Strip Clutter & Ads</label>
+              <span>Ignore scripts, styles, cookie banners, sidebars, and ads during extraction.</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-extract-clutter" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Strip Navigation Elements</label>
+              <span>Omit top navigation bars, menus, and footers to focus on core article content.</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-extract-nav" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Preserve Markdown Headings</label>
+              <span>Convert HTML H1-H6 tags into clean structured Markdown (# Heading).</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-extract-headings" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-row">
+            <div class="setting-info">
+              <label>Preserve Lists & Bullet Points</label>
+              <span>Format unordered and ordered lists with clear bullet markers.</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="setting-extract-lists" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="card notice-card">
+          <h4>Legal & Security Standard Compliance</h4>
+          <p>Pastiq only extracts content that is already visibly rendered and accessible to the user on the screen. It never circumvents authentication, paywalls, DRM, or browser origin sandboxing.</p>
+        </div>
+      </section>
+
+      <!-- KEYBOARD SHORTCUTS TAB -->
+      <section id="tab-shortcuts" class="tab-panel">
+        <div class="panel-header">
+          <h1>Keyboard-First Productivity</h1>
+          <p>Operate your clipboard at the speed of thought without touching the mouse.</p>
+        </div>
+
+        <div class="shortcuts-grid">
+          <div class="shortcut-card">
+            <div class="shortcut-keys"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd></div>
+            <h4>Quick In-Page Palette</h4>
+            <p>Summons the floating command palette over any active webpage for instant search & paste.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <div class="shortcut-keys"><kbd>↑</kbd> / <kbd>↓</kbd></div>
+            <h4>Navigate History</h4>
+            <p>Scroll up and down through matching clipboard items and snippets instantly.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <div class="shortcut-keys"><kbd>Enter</kbd></div>
+            <h4>Paste / Copy Item</h4>
+            <p>Copies the highlighted item or pastes it directly into your active input field.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <div class="shortcut-keys"><kbd>Delete</kbd></div>
+            <h4>Delete Item</h4>
+            <p>Instantly removes the highlighted item from your local history.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <div class="shortcut-keys"><kbd>Esc</kbd></div>
+            <h4>Dismiss Palette</h4>
+            <p>Immediately closes the popup or in-page palette and restores input focus.</p>
+          </div>
+
+          <div class="shortcut-card">
+            <div class="shortcut-keys"><kbd>;</kbd> + <kbd>shortcut</kbd></div>
+            <h4>Inline Expansion</h4>
+            <p>Type any registered snippet shortcut (e.g. <code>;email</code>) to expand in real time.</p>
+          </div>
+        </div>
+
+        <div class="customize-link-box">
+          <p>Want to change browser-level activation keys? Visit <a href="chrome://extensions/shortcuts" target="_blank">Chrome Shortcut Manager</a>.</p>
+        </div>
+      </section>
+
+      <!-- SYNC TAB (COMING SOON) -->
+      <section id="tab-sync" class="tab-panel">
+        <div class="panel-header">
+          <h1>Cross-Device Sync</h1>
+          <p>Encrypted multi-device synchronization is currently in development for V2.</p>
+        </div>
+
+        <div class="sync-showcase-card">
+          <div class="sync-lock-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h2>Zero-Knowledge Encrypted Sync</h2>
+          <div class="coming-soon-pill">COMING SOON IN V2</div>
+          <p class="sync-description">
+            We are engineering an end-to-end encrypted protocol ensuring that your clipboard items, snippets, and folders sync seamlessly across Chrome on macOS, Windows, and Linux. Your encryption keys will stay strictly on your local devices.
+          </p>
+
+          <div class="sync-pillars">
+            <div class="pillar">
+              <div class="pillar-title">End-to-End Encrypted</div>
+              <p>AES-256-GCM encryption with client-side keys. No third party can read your data.</p>
+            </div>
+            <div class="pillar">
+              <div class="pillar-title">Instant Hand-off</div>
+              <p>Copy on your desktop, paste on your laptop within 100 milliseconds.</p>
+            </div>
+            <div class="pillar">
+              <div class="pillar-title">Selective Sync</div>
+              <p>Configure which categories, folders, and snippets sync across specific devices.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT TAB -->
+      <section id="tab-about" class="tab-panel">
+        <div class="panel-header">
+          <h1>About Pastiq</h1>
+          <p>A memory layer for everything you copy in Chrome.</p>
+        </div>
+
+        <div class="card about-card">
+          <div class="about-hero">
+            <div class="logo-box-large">
+              <img src="../icons/icon128.png" width="48" height="48" alt="Pastiq" style="border-radius: 8px; display: block;" />
+            </div>
+            <div>
+              <h2>Pastiq V1.0.0</h2>
+              <p class="subtitle">Production-grade local-first Clipboard & Snippet Manager</p>
+            </div>
+          </div>
+
+          <div class="privacy-manifesto">
+            <h3>Privacy Guarantee</h3>
+            <p>
+              Your clipboard data is stored strictly in your browser's private IndexedDB database on your physical machine. Pastiq contains <strong>zero tracking scripts, zero third-party telemetry, and zero network calls</strong> for clipboard operations. Your personal snippets, URLs, and copied text never leave your machine.
+            </p>
+          </div>
+
+          <div class="about-specs">
+            <div class="spec-row">
+              <span>Extension Architecture</span>
+              <code>Chrome Manifest V3</code>
+            </div>
+            <div class="spec-row">
+              <span>Storage Engine</span>
+              <code>IndexedDB (Isolated local database)</code>
+            </div>
+            <div class="spec-row">
+              <span>Text Expansion</span>
+              <code>Targeted Event Engine (Zero Polling)</code>
+            </div>
+            <div class="spec-row">
+              <span>Cloud Sync</span>
+              <code>Offline-First (V2 Encrypted Sync Ready)</code>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Snippet Modal for Settings -->
+  <div id="options-snippet-modal" class="modal-backdrop hidden">
+    <div class="modal-dialog">
+      <div class="modal-dialog-header">
+        <h3 id="modal-title">New Snippet</h3>
+        <button id="btn-close-snippet-dialog" class="modal-close-btn">×</button>
+      </div>
+      <div class="modal-dialog-body">
+        <div class="form-group">
+          <label>Snippet Name</label>
+          <input type="text" id="opt-snippet-name" placeholder="e.g. Standard Email Signoff" />
+        </div>
+        <div class="form-group">
+          <label>Shortcut Trigger</label>
+          <input type="text" id="opt-snippet-shortcut" placeholder="e.g. ;signoff" />
+        </div>
+        <div class="form-group">
+          <label>Snippet Content</label>
+          <textarea id="opt-snippet-content" rows="5" placeholder="Enter the text that will replace this shortcut..."></textarea>
+        </div>
+      </div>
+      <div class="modal-dialog-footer">
+        <button id="btn-cancel-snippet-dialog" class="btn-secondary">Cancel</button>
+        <button id="btn-save-snippet-dialog" class="btn-primary">Save Snippet</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="options-toast" class="options-toast">Settings saved</div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

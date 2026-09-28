@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Pastiq</title>
+  <link rel="stylesheet" href="onboarding.css">
+</head>
+<body class="theme-cinematic">
+  <div class="onboarding-container">
+    <div class="glow-orb"></div>
+
+    <div class="brand-badge">
+      <img src="../icons/icon32.png" width="22" height="22" alt="Pastiq" style="border-radius: 4px; display: block;" />
+      <span>PASTIQ</span>
+    </div>
+
+    <h1 class="headline">Your browser just got a memory.</h1>
+    <p class="subheadline">Everything you copy stays instantly accessible, organized, and strictly on your device.</p>
+
+    <div class="tutorial-grid">
+      <div class="tutorial-card">
+        <div class="tutorial-step">1</div>
+        <div class="step-icon">
+          <kbd>Ctrl</kbd> + <kbd>C</kbd>
+        </div>
+        <h3>Copy Anything</h3>
+        <p>Text, links, code, and images are saved locally the moment you copy them.</p>
+      </div>
+
+      <div class="tutorial-card">
+        <div class="tutorial-step">2</div>
+        <div class="step-icon">
+          <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd>
+        </div>
+        <h3>Summon Anywhere</h3>
+        <p>Open the in-page quick palette on any webpage to search and paste instantly.</p>
+      </div>
+
+      <div class="tutorial-card">
+        <div class="tutorial-step">3</div>
+        <div class="step-icon">
+          <span class="trigger-demo">;email</span>
+        </div>
+        <h3>Expand Snippets</h3>
+        <p>Type registered shortcuts to automatically expand reusable text replies.</p>
+      </div>
+    </div>
+
+    <div class="privacy-note">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+      </svg>
+      <span>No accounts. No servers. 100% offline-first & private.</span>
+    </div>
+
+    <div class="onboarding-actions">
+      <button id="btn-start" class="btn-start">Start Using Pastiq</button>
+      <button id="btn-learn" class="btn-learn">Configure Settings</button>
+    </div>
+  </div>
+
+  <script type="module" src="onboarding.js"></script>
+</body>
+</html>

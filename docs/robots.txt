@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pratyushkk.github.io/pastiq/sitemap.xml

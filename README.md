@@ -11,11 +11,13 @@ It combines three closely related workflows into one unified, blazing-fast searc
 
 ---
 
-## 🌐 Official Website & Links
+## 🌐 Official Store Listings & Links
 
-- **Live Website**: [https://pratyushkk.github.io/pastiq-website/](https://pratyushkk.github.io/pastiq-website/)
-- **Website Repository**: [pratyushkk/pastiq-website](https://github.com/pratyushkk/pastiq-website)
+- **Chrome Web Store**: [Install for Google Chrome](https://chromewebstore.google.com/detail/fnlfffhpiaoiljenmjepgnjdpjjngoed?utm_source=item-share-cb)
+- **Microsoft Edge Add-ons**: [Install for Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/pastiq-%E2%80%94-clipboard-comm/obihcbagfbnngcpdahdcihdpgjglkilc)
+- **Official Website**: [https://pratyushkk.github.io/pastiq-website/](https://pratyushkk.github.io/pastiq-website/)
 - **Privacy Policy**: [https://pratyushkk.github.io/pastiq-website/privacy.html](https://pratyushkk.github.io/pastiq-website/privacy.html)
+- **Website Repository**: [pratyushkk/pastiq-website](https://github.com/pratyushkk/pastiq-website)
 
 ---
 
